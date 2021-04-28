@@ -136,14 +136,14 @@
   // initialize the map
   var map = L.map('map').setView([42.35, -71.08], 13);
 
-  // add MapBox Streets basemap
-  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+ // add MapBox Streets basemap updated Spring 2021
+   L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
-    attribution: 'Map data &lt;a href="https://www.openstreetmap.org/"&gt; OpenStreetMap&gt; contributors, ' +
-      '&lt;a href="https://creativecommons.org/licenses/by-sa/2.0/"&gt;CC-BY-SA&gt;, ' +
-      'Imagery © &lt; href="https://www.mapbox.com/"&gt;Mapbox&gt;',
-    id: 'mapbox.streets'
-  }).addTo(map);
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'pk.eyJ1I
 
   &lt;/script&gt;
 &lt;/body&gt;
@@ -374,7 +374,7 @@ $.getJSON("neighborhoods.geojson",function(hoodData){
 <!-- <a class="standalone" href="http://bl.ocks.org/awoodruff/5de3553bb1f1b0c5f90d" target="_blank">View this example on its own</a> -->
 <pre><code class="language-markup">
 &lt;link rel="stylesheet" href="./Leaflet-1.0.3/leaflet.css"/&gt;
-OOO &lt;link rel="stylesheet" href="./Leaflet.markercluster-1.0.5/MarkerCluster.css"/&gt; CCC
+OOO &lt;link rel="stylesheet" href="./Leaflet.markercluster-1.0.5/MarkerCluster.Default.css"/&gt; CCC
 &lt;script src="./Leaflet-1.0.3/leaflet.js"&gt;&lt;/script&gt;
 OOO &lt;script src="./Leaflet.markercluster-1.0.5/leaflet.markercluster.js"&gt;&lt;/script&gt; CCC
 &lt;script src="jquery-2.1.1.min.js"&gt;&lt;/script&gt;
